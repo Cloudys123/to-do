@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7f7f7 0%, #ec5b0c 100%);
+    margin: 0;
+}
+
+.todo-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 350px;
+    text-align: center;
+}
+
+.todo-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+#add-button {
+    background: linear-gradient(135deg, #f7f7f7 0%, #ec5b0c 100%);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+#add-button:hover {
+    background: linear-gradient(135deg, #ec5b0c 0%, #f7f7f7 100%);
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.todo-item.completed .text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.check-button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.check-button::before {
+    content: '✔️';
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.check-button.completed {
+    border-color: #ec5b0c;
+    background-color: #ec5b0c;
+}
+
+.check-button.completed::before {
+    opacity: 1;
+    transform: scale(1.2);
+    color: white;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    color: #ec5b0c;
+    transition: color 0.3s;
+}
+
+.delete-button:hover {
+    color: #ec5b0c;
+}
+
